@@ -9,35 +9,102 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f5f6f7;
     display: flex;
     justify-content: center;
-    background-color: #ffffff;
 }
-.container {
+
+.card {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    margin: 40px 16px;
+    overflow: hidden;
+}
+
+.cover {
+    height: 180px;
+    background: linear-gradient(135deg, #1877f2, #0a58ca);
+}
+
+.content {
+    padding: 24px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: -50px;
+    border: 4px solid #fff;
+    object-fit: cover;
+}
+
+h1 {
+    margin: 16px 0 8px;
+    font-size: 22px;
+}
+
+.description {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #1877f2;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #0d65d9;
+}
+
+.footer {
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
 }
 </style>
 
 </head>
 <body>
 
-<div class="container">
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous"
-    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0">
-    </script>
+<div class="card">
 
-    <div class="fb-page"
-        data-href="https://www.facebook.com/profile.php?id=61588298821470"
-        data-tabs="timeline"
-        data-width="500"
-        data-height="800"
-        data-small-header="false"
-        data-adapt-container-width="true"
-        data-hide-cover="false"
-        data-show-facepile="true">
+    <div class="cover"></div>
+
+    <div class="content">
+        <!-- 如果你有头像图片，可以把下面 src 换成你的头像链接 -->
+        <img class="profile-pic" src="https://via.placeholder.com/100" alt="Profile">
+
+        <h1>My Facebook Page</h1>
+
+        <div class="description">
+            欢迎关注我们的 Facebook 页面，获取最新动态与内容更新。
+        </div>
+
+        <a class="button" 
+           href="https://www.facebook.com/profile.php?id=61588298821470" 
+           target="_blank">
+           访问并关注 Facebook
+        </a>
+
+        <div class="footer">
+            Powered by GitHub Pages
+        </div>
     </div>
+
 </div>
 
 </body>
